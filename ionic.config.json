@@ -1,0 +1,14 @@
+{
+  "name": "drinks",
+  "app_id": "9cb85f11",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/users",
+      "proxyUrl": "https://pi2-api.herokuapp.com/users"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+page-menu {
+    .tabs-md .tab-button {
+        color: #FFC400 !important;
+       }
+      
+       .tabs-md .tab-button[aria-selected=true] {
+         color: #DD2C00 !important;
+       }
+}

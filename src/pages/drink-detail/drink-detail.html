@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Description
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Fechar</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <img src="{{ image }}"/>
+
+    <ion-card-content>
+      <ion-card-title style="text-align: center;">
+        {{ drink.nome }}
+      </ion-card-title>
+      <p style="text-align: center;">{{ drink.volume }}ml de {{ drink.descricao }}</p>      
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header style="text-align: center;">
+      R{{ drink.preco | currency : 'usd' : true }}
+    </ion-list-header>
+    <ion-item >
+      <ion-label>Gelo?</ion-label>
+      <ion-toggle checked="false" [(ngModel)]="ice"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <button ion-button block color="dark" (click)="checkoutCustomDrink(drink)">Finalizar Compra</button>
+</ion-content>
