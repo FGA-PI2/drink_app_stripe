@@ -30682,7 +30682,3 @@ page-menu .tabs-md .tab-button {
 page-menu .tabs-md .tab-button[aria-selected=true] {
   color: #DD2C00 !important;
 }
-
-page-pay .icon {
-  font-size: 32px;
-}

@@ -40,6 +40,22 @@ module.exports = [
       "cordova.plugins.Keyboard"
     ],
     "runs": true
+  },
+  {
+    "id": "card.io.cordova.mobilesdk.CardIO",
+    "file": "plugins/card.io.cordova.mobilesdk/www/cdv-plugin-card-io.js",
+    "pluginId": "card.io.cordova.mobilesdk",
+    "clobbers": [
+      "CardIO"
+    ]
+  },
+  {
+    "id": "com.paypal.cordova.mobilesdk.PayPalMobile",
+    "file": "plugins/com.paypal.cordova.mobilesdk/www/cdv-plugin-paypal-mobile-sdk.js",
+    "pluginId": "com.paypal.cordova.mobilesdk",
+    "clobbers": [
+      "PayPalMobile"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -51,7 +67,9 @@ module.exports.metadata =
   "cordova-plugin-stripe": "1.5.3",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-console": "1.0.5"
+  "cordova-plugin-console": "1.0.5",
+  "card.io.cordova.mobilesdk": "2.1.0",
+  "com.paypal.cordova.mobilesdk": "3.5.0"
 };
 // BOTTOM OF METADATA
 });

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import { UserService } from '../../domain/user/user-service';
-import { PayPage } from '../pay/pay';
+
 
 @IonicPage()
 @Component({
@@ -9,17 +9,11 @@ import { PayPage } from '../pay/pay';
   templateUrl: 'creditos.html',
 })
 export class CreditosPage {
-  
-  payPage = PayPage;
+
   private _credits: number;
-  constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
-    private _userService: UserService, 
-    private _alertCtrl: AlertController,
-    public modalCtrl: ModalController,
-    ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _userService: UserService, private _alertCtrl: AlertController) {
   }
+
 
   buyCredits(){
     this._alertCtrl.create({
@@ -27,13 +21,7 @@ export class CreditosPage {
       buttons: [{ text: 'Cancelar' },{ text: 'OK', handler: () => {
         this._userService.updateCreditos(this._credits, true);
       }}],
-      subTitle: `Deseja comprar ${this._credits} reais em créditos?`
+      subTitle: `Deseja comprar R$${this._credits},00 de créditos?`
     }).present();
-  }
-
-  goToPaymentsPage(){
-    let modal = this.modalCtrl.create(PayPage);
-        modal.present();
-    
   }
 }

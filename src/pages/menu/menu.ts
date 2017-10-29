@@ -7,6 +7,7 @@ import { HomePage } from '../home/home';
 import { HistoricoPage } from '../historico/historico';
 import { LoginPage } from '../login/login';
 import { CreditosPage } from '../creditos/creditos';
+import { PayPalPage } from '../paypal/paypal';
 
 @Component({
   selector: 'page-menu',
@@ -20,7 +21,8 @@ export class MenuPage{
   tab2Root = CardapioPage;
   tab3Root = CreditosPage;
   tab4Root = HistoricoPage;
-  tab5Root = logout;
+  tab5Root = PayPalPage;
+  tab6Root = logout;
 
   constructor(
     public navCtrl: NavController,

@@ -20,7 +20,8 @@ import { HomePage } from '../pages/home/home';
 import { CreditosPage } from '../pages/creditos/creditos';
 import { HistoricoPage } from '../pages/historico/historico';
 import { Stripe } from '@ionic-native/stripe';
-import { PayPage } from '../pages/pay/pay';
+import { PayPalPage } from '../pages/paypal/paypal';
+import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,12 @@ import { PayPage } from '../pages/pay/pay';
     HomePage,
     CreditosPage,
     HistoricoPage,
-    PayPage
+    PayPalPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +56,7 @@ import { PayPage } from '../pages/pay/pay';
     HomePage,
     CreditosPage,
     HistoricoPage,
-    PayPage
+    PayPalPage
   ],
   providers: [
     StatusBar,
@@ -64,6 +65,7 @@ import { PayPage } from '../pages/pay/pay';
     Cardapio,
     BebidaService,
     Stripe,
+    PayPal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

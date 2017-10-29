@@ -27,7 +27,14 @@
         },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "io.ionic.starter"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "card.io.cordova.mobilesdk": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        }
+    }
 }

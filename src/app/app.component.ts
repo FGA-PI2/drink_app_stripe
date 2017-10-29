@@ -7,6 +7,8 @@ import { LoginPage } from '../pages/login/login';
 import { MenuPage } from '../pages/menu/menu';
 import { CardapioPage } from '../pages/cardapio/cardapio';
 import { QuerycodePage } from '../pages/querycode/querycode';
+import { PayPalPage } from '../pages/paypal/paypal';
+
 
 
 @Component({
@@ -20,6 +22,7 @@ export class MyApp {
     {titulo: "Comprar Créditos", componente: CardapioPage},
     {titulo: "Histórico", componente: CardapioPage},
     {titulo: "Sair", componente: CardapioPage},
+    {titulo: "PayPal", componente: CardapioPage}
   ]
 @ViewChild(Nav) public nav: Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

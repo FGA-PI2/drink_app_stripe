@@ -22,10 +22,16 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CardIO">
+        <param name="android-package" value="io.card.cordova.sdk.CardIOCordovaPlugin" />
+    </feature>
+    <feature name="PayPalMobile">
+        <param name="android-package" value="com.paypal.cordova.sdk.PayPalMobileCordovaPlugin" />
+    </feature>
     <name>SunBar App</name>
     <description>Aplicativo da SunBar Machine!.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.0.11:8101" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
@@ -34,9 +40,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="http://10.0.1.8:8100" />
-    <allow-navigation href="http://192.168.43.112:8100" />
-    <allow-navigation href="http://192.168.0.11:8101" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drink-sun.png" />
     <icon density="mdpi" src="resources/android/icon/drink-sun.png" />

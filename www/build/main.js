@@ -6,13 +6,13 @@ webpackJsonp([6],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__domain_user_user_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__domain_user_user_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_menu_menu__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_admin_admin__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_admin_admin__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -142,13 +142,14 @@ LoginPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* unused harmony export logout */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cardapio_cardapio__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__historico_historico__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__creditos_creditos__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__paypal_paypal__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -166,6 +167,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MenuPage = (function () {
     function MenuPage(navCtrl, _service) {
         this.navCtrl = navCtrl;
@@ -174,7 +176,8 @@ var MenuPage = (function () {
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__cardapio_cardapio__["a" /* CardapioPage */];
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_7__creditos_creditos__["a" /* CreditosPage */];
         this.tab4Root = __WEBPACK_IMPORTED_MODULE_5__historico_historico__["a" /* HistoricoPage */];
-        this.tab5Root = logout;
+        this.tab5Root = __WEBPACK_IMPORTED_MODULE_8__paypal_paypal__["a" /* PayPalPage */];
+        this.tab6Root = logout;
     }
     Object.defineProperty(MenuPage.prototype, "loggedUser", {
         get: function () {
@@ -190,7 +193,7 @@ var MenuPage = (function () {
 }());
 MenuPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-menu',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/menu/menu.html"*/'<ion-content>\n  <h2>Olá {{ loggedUser.email }}!</h2>\n  <h2>Créditos: R{{ loggedUser.creditos | currency : \'USD\' : true}}!</h2>\n  <ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Início" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Drinks" tabIcon="wine"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Créditos" tabIcon="card"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Histórico" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab4Root" (ionSelect)="logout()" tabTitle="Sair" tabIcon="log-out"></ion-tab>\n</ion-tabs>\n</ion-content>\n'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/menu/menu.html"*/
+        selector: 'page-menu',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/menu/menu.html"*/'<ion-content>\n  <h2>Olá {{ loggedUser.email }}!</h2>\n  <h2>Créditos: R{{ loggedUser.creditos | currency : \'USD\' : true}}!</h2>\n  <ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Início" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Drinks" tabIcon="wine"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Créditos" tabIcon="card"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Histórico" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab5Root" tabTitle="PayPal" tabIcon="cash"></ion-tab>\n  <ion-tab [root]="tab6Root" (ionSelect)="logout()" tabTitle="Sair" tabIcon="log-out"></ion-tab>\n</ion-tabs>\n</ion-content>\n'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/menu/menu.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__["a" /* UserService */]])
@@ -215,15 +218,15 @@ var logout = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DrinkDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_querycode_querycode__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -397,9 +400,9 @@ DrinkDetailPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoricoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -472,9 +475,8 @@ HistoricoPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreditosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pay_pay__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -487,15 +489,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var CreditosPage = (function () {
-    function CreditosPage(navCtrl, navParams, _userService, _alertCtrl, modalCtrl) {
+    function CreditosPage(navCtrl, navParams, _userService, _alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this._userService = _userService;
         this._alertCtrl = _alertCtrl;
-        this.modalCtrl = modalCtrl;
-        this.payPage = __WEBPACK_IMPORTED_MODULE_3__pay_pay__["a" /* PayPage */];
     }
     CreditosPage.prototype.buyCredits = function () {
         var _this = this;
@@ -504,25 +503,17 @@ var CreditosPage = (function () {
             buttons: [{ text: 'Cancelar' }, { text: 'OK', handler: function () {
                         _this._userService.updateCreditos(_this._credits, true);
                     } }],
-            subTitle: "Deseja comprar " + this._credits + " reais em cr\u00E9ditos?"
+            subTitle: "Deseja comprar R$" + this._credits + ",00 de cr\u00E9ditos?"
         }).present();
-    };
-    CreditosPage.prototype.goToPaymentsPage = function () {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__pay_pay__["a" /* PayPage */]);
-        modal.present();
     };
     return CreditosPage;
 }());
 CreditosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-creditos',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/creditos/creditos.html"*/'<!--\n  Generated template for the CreditosPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Comprar Créditos</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list class="animated bounceInDown">\n    <ion-item-divider style="text-align: center;" color="light">\n      Digite o Valor\n    </ion-item-divider>\n    <div class="spacer" style="height:50px;" id="page-spacer1"></div>\n    <ion-item>\n      <ion-input [(ngModel)]="_credits" type="number" placeholder="R$ 15,00"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button class="animated bounceInUp" ion-button block color="dark" (click)="buyCredits()">Comprar</button>\n  <button class="animated bounceInUp" ion-button block color="dark" [navPush]="payPage">Comprar com cartão</button>\n</ion-content>'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/creditos/creditos.html"*/,
+        selector: 'page-creditos',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/creditos/creditos.html"*/'<!--\n  Generated template for the CreditosPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Comprar Créditos</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list class="animated bounceInDown">\n    <ion-item-divider style="text-align: center;" color="light">\n      Digite o Valor\n    </ion-item-divider>\n    <div class="spacer" style="height:50px;" id="page-spacer1"></div>\n    <ion-item>\n      <ion-input [(ngModel)]="_credits" type="number" placeholder="R$ 15,00"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button class="animated bounceInUp" ion-button block color="dark" (click)="buyCredits()">Comprar</button>\n</ion-content>'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/creditos/creditos.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__["a" /* UserService */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], CreditosPage);
 
 //# sourceMappingURL=creditos.js.map
@@ -546,186 +537,32 @@ webpackEmptyAsyncContext.id = 121;
 
 /***/ }),
 
-/***/ 16:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var UserService = (function () {
-    function UserService(_http, _alertCtrl, _loadingCtrl) {
-        this._http = _http;
-        this._alertCtrl = _alertCtrl;
-        this._loadingCtrl = _loadingCtrl;
-        this.headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
-            'Content-Type': 'application/json',
-            'authorization': this._token
-        });
-        this.options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
-        this._user = new __WEBPACK_IMPORTED_MODULE_1__user__["a" /* User */]();
-        this._userLogado = new __WEBPACK_IMPORTED_MODULE_1__user__["a" /* User */]();
-    }
-    UserService.prototype.getLoggedUser = function () {
-        return this._userLogado;
-    };
-    UserService.prototype.getEmailLoggedUser = function () {
-        return this._userLogado.email;
-    };
-    UserService.prototype.getIDLoggedUser = function () {
-        return this._userLogado.id;
-    };
-    UserService.prototype.getToken = function () {
-        console.log('buscando token:', this._token);
-        return this._token;
-    };
-    UserService.prototype.saveToken = function (token) {
-        console.log('buscando token:', this._token);
-        this._token = token;
-    };
-    UserService.prototype.saveLoggedUser = function (user) {
-        this._userLogado = user;
-    };
-    UserService.prototype.updateCreditos = function (creditos, plus) {
-        var _this = this;
-        console.log('novo: ', Number(creditos), 'antigo: ', typeof (this._userLogado.creditos));
-        var url = "http://dev-pi2-api.herokuapp.com/users/" + this._userLogado.id + "/";
-        if (plus == true) {
-            this.loader = this._loadingCtrl.create({
-                content: 'Processando...'
-            });
-            this.loader.present();
-            var newCredits = this._userLogado.creditos + Number(creditos);
-            console.log('newCredits: ', newCredits);
-            var cred_1 = {
-                creditos: newCredits
-            };
-            console.log('OIE', JSON.stringify(cred_1));
-            console.log('A URL É: ', url);
-            this._http.patch(url, cred_1, this.options).subscribe(function (data) {
-                console.log(data);
-                _this.loader.dismiss();
-                _this._alertCtrl.create({
-                    title: 'Sucesso!',
-                    buttons: [{ text: 'OK' }],
-                    subTitle: 'Sua compra foi aprovada!'
-                }).present();
-                _this._userLogado.creditos = cred_1.creditos;
-            });
-        }
-        else {
-            var cred_2 = {
-                creditos: this._userLogado.creditos - creditos
-            };
-            console.log(JSON.stringify(cred_2));
-            console.log('A URL É: ', url);
-            this._http.patch(url, cred_2, this.options).subscribe(function (data) {
-                console.log(data);
-                _this._userLogado.creditos = cred_2.creditos;
-            });
-        }
-    };
-    UserService.prototype.updateCreditosCartao = function (creditos, plus) {
-        var _this = this;
-        console.log('novo: ', Number(creditos), 'antigo: ', typeof (this._userLogado.creditos));
-        var url = "http://dev-pi2-api.herokuapp.com/users/" + this._userLogado.id + "/";
-        if (plus == true) {
-            this.loader = this._loadingCtrl.create({
-                content: 'Processando...'
-            });
-            var newCredits = this._userLogado.creditos + Number(creditos);
-            console.log('newCredits: ', newCredits);
-            var cred_3 = {
-                creditos: newCredits
-            };
-            console.log('OIE', JSON.stringify(cred_3));
-            console.log('A URL É: ', url);
-            this._http.patch(url, cred_3, this.options).subscribe(function (data) {
-                console.log(data);
-                _this._userLogado.creditos = cred_3.creditos;
-            });
-        }
-        else {
-            var cred_4 = {
-                creditos: this._userLogado.creditos - creditos
-            };
-            console.log(JSON.stringify(cred_4));
-            console.log('A URL É: ', url);
-            this._http.patch(url, cred_4, this.options).subscribe(function (data) {
-                console.log(data);
-                _this._userLogado.creditos = cred_4.creditos;
-            });
-        }
-    };
-    return UserService;
-}());
-UserService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* LoadingController */]])
-], UserService);
-
-//# sourceMappingURL=user-service.js.map
-
-/***/ }),
-
 /***/ 163:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/cardapio/cardapio.module": [
-		288,
+		289,
 		5
 	],
 	"../pages/creditos/creditos.module": [
-		290,
+		291,
 		4
 	],
 	"../pages/drink-detail/drink-detail.module": [
-		287,
+		288,
 		3
 	],
 	"../pages/historico/historico.module": [
-		289,
+		290,
 		2
 	],
 	"../pages/menu-admin/menu-admin.module": [
-		291,
+		292,
 		0
 	],
 	"../pages/querycode/querycode.module": [
-		286,
+		287,
 		1
 	]
 };
@@ -821,15 +658,25 @@ Cardapio = __decorate([
 
 /***/ }),
 
-/***/ 169:
+/***/ 19:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PayPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__noodliopay__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -844,118 +691,110 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PayPage = (function () {
-    function PayPage(navCtrl, NoodlioPay, navParams, _userService, _alertCtrl, modalCtrl) {
-        this.navCtrl = navCtrl;
-        this.NoodlioPay = NoodlioPay;
-        this.navParams = navParams;
-        this._userService = _userService;
+
+
+
+
+var UserService = (function () {
+    function UserService(_http, _alertCtrl, _loadingCtrl) {
+        this._http = _http;
         this._alertCtrl = _alertCtrl;
-        this.modalCtrl = modalCtrl;
-        /**
-        * Init
-        */
-        this.inputForm = {
-            currency: 'BRL',
-            amountCents: 500,
-            date: this.todayFormatted(),
-            number: 4242424242424242,
-            name: "João da Silva Sauro",
-            cvc: 123,
-        };
-        this.status = {
-            message: '',
-            loading: false,
-            success: null,
-        };
-    }
-    /**
-    * fn Charge Card
-    */
-    PayPage.prototype.charge = function () {
-        var _this = this;
-        // obtain the exp_month and exp_year
-        var split = this.inputForm['date'].split('-');
-        this.inputForm['exp_month'] = split[1];
-        this.inputForm['exp_year'] = split[0];
-        // validate the card details and process the payment
-        this.status['message'] = '';
-        this.status['loading'] = true;
-        this.status['success'] = null;
-        this.NoodlioPay.charge(this.inputForm).subscribe(function (data) {
-            console.log(data);
-            _this.status['message'] = data.message || 'Pagamento processado!';
-            _this.status['loading'] = false;
-            if (data.hasOwnProperty('id')) {
-                _this.status['success'] = true;
-                _this._userService.updateCreditosCartao(_this.inputForm['amountCents'], true);
-            }
-        }, function (error) {
-            console.log(error);
-            _this.status['message'] = 'Oops... something went wrong.';
-            _this.status['loading'] = false;
-            _this.status['success'] = false;
+        this._loadingCtrl = _loadingCtrl;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
+            'Content-Type': 'application/json',
+            'authorization': this._token
         });
+        this.options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
+        this._user = new __WEBPACK_IMPORTED_MODULE_1__user__["a" /* User */]();
+        this._userLogado = new __WEBPACK_IMPORTED_MODULE_1__user__["a" /* User */]();
+    }
+    UserService.prototype.getLoggedUser = function () {
+        return this._userLogado;
     };
-    ;
-    PayPage.prototype.buyCredits = function () {
+    UserService.prototype.getEmailLoggedUser = function () {
+        return this._userLogado.email;
+    };
+    UserService.prototype.getIDLoggedUser = function () {
+        return this._userLogado.id;
+    };
+    UserService.prototype.getToken = function () {
+        console.log('buscando token:', this._token);
+        return this._token;
+    };
+    UserService.prototype.saveToken = function (token) {
+        console.log('buscando token:', this._token);
+        this._token = token;
+    };
+    UserService.prototype.saveLoggedUser = function (user) {
+        this._userLogado = user;
+    };
+    UserService.prototype.updateCreditos = function (creditos, plus) {
         var _this = this;
-        this._alertCtrl.create({
-            title: 'Atenção!',
-            buttons: [{ text: 'Cancelar' }, { text: 'OK', handler: function () {
-                        _this._userService.updateCreditos(_this.inputForm['amountCents'], true);
-                    } }],
-            subTitle: "Deseja comprar " + this.inputForm['amountCents'] + " reais em cr\u00E9ditos?"
-        }).present();
-    };
-    /*
-    * Helper functions
-    */
-    PayPage.prototype.todayFormatted = function () {
-        var d = new Date();
-        var m = d.getMonth() + 1;
-        var y = d.getFullYear();
-        if (m < 10) {
-            return y + '-0' + m;
+        console.log('novo: ', Number(creditos), 'antigo: ', typeof (this._userLogado.creditos));
+        var url = "http://dev-pi2-api.herokuapp.com/users/" + this._userLogado.id + "/";
+        if (plus == true) {
+            this.loader = this._loadingCtrl.create({
+                content: 'Processando...'
+            });
+            this.loader.present();
+            var newCredits = this._userLogado.creditos + Number(creditos);
+            console.log('newCredits: ', newCredits);
+            var cred_1 = {
+                creditos: newCredits
+            };
+            console.log('OIE', JSON.stringify(cred_1));
+            console.log('A URL É: ', url);
+            this._http.patch(url, cred_1, this.options).subscribe(function (data) {
+                console.log(data);
+                _this.loader.dismiss();
+                _this._alertCtrl.create({
+                    title: 'Sucesso!',
+                    buttons: [{ text: 'OK' }],
+                    subTitle: 'Sua compra foi aprovada!'
+                }).present();
+                _this._userLogado.creditos = cred_1.creditos;
+            });
         }
         else {
-            return y + '-' + m;
+            var cred_2 = {
+                creditos: this._userLogado.creditos - creditos
+            };
+            console.log(JSON.stringify(cred_2));
+            console.log('A URL É: ', url);
+            this._http.patch(url, cred_2, this.options).subscribe(function (data) {
+                console.log(data);
+                _this._userLogado.creditos = cred_2.creditos;
+            });
         }
     };
-    return PayPage;
+    return UserService;
 }());
-PayPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-pay',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/pay/pay.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Cartão\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <form #customForm="ngForm" (ngSubmit)="charge()">\n    <ion-list>\n\n      <ion-item>\n        <ion-label stacked>Nome no cartão</ion-label>\n        <ion-input type="text" [(ngModel)]="inputForm.name" name="name" required></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Número do cartão</ion-label>\n        <ion-input type="text" pattern="[0-9]{13,16}" [(ngModel)]="inputForm.number" name="number" required></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Data de validade (mês/ano)</ion-label>\n        <ion-datetime min="2017" max="2030" displayFormat="MM/YYYY" [(ngModel)]="inputForm.date" name="date" required></ion-datetime>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Código de segurança</ion-label>\n        <ion-input type="number" [(ngModel)]="inputForm.cvc" name="cvc" required></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Valor</ion-label>\n        <ion-input type="number" [(ngModel)]="inputForm.amountCents" name="valorDaCompra" required></ion-input>\n      </ion-item>\n\n    </ion-list>\n\n    <div padding>\n      <button [disabled]="!customForm.form.valid" type="submit" ion-button full color="secondary">Comprar créditos</button>\n      <button class="animated bounceInUp" ion-button block color="dark" (click)="buyCredits()">Comprar créditos</button>\n    </div>\n  </form>\n\n  <div padding text-center *ngIf="!status.message && status.loading"><ion-spinner></ion-spinner></div>\n\n  <div padding text-center text-wrap *ngIf="status.message">\n    <p>\n      <ion-icon name="information-circle" color="danger" *ngIf="status.success != true"></ion-icon>\n      <ion-icon name="checkmark-circle" color="secondary" *ngIf="status.success == true"></ion-icon>\n    </p>\n\n    <p>\n      {{status.message}}\n    </p>\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/pay/pay.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_2__noodliopay__["a" /* NoodlioPay */]]
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__noodliopay__["a" /* NoodlioPay */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__["a" /* UserService */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
-], PayPage);
+UserService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* LoadingController */]])
+], UserService);
 
-//# sourceMappingURL=pay.js.map
+//# sourceMappingURL=user-service.js.map
 
 /***/ }),
 
-/***/ 211:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__);
@@ -1041,7 +880,67 @@ RegisterPage = __decorate([
 
 /***/ }),
 
-/***/ 212:
+/***/ 211:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PayPalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_paypal__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config__ = __webpack_require__(284);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PayPalPage = (function () {
+    function PayPalPage(payPal) {
+        this.payPal = payPal;
+        this.payment = new __WEBPACK_IMPORTED_MODULE_1__ionic_native_paypal__["c" /* PayPalPayment */]('10.10', 'BRL', 'TV', 'sale');
+        this.currencies = ['BRL'];
+        this.payPalEnvironment = 'payPalEnvironmentSandbox';
+    }
+    PayPalPage.prototype.makePayment = function () {
+        var _this = this;
+        this.payPal.init({
+            PayPalEnvironmentProduction: __WEBPACK_IMPORTED_MODULE_2__config__["a" /* Config */].payPalEnvironmentProduction,
+            PayPalEnvironmentSandbox: __WEBPACK_IMPORTED_MODULE_2__config__["a" /* Config */].payPalEnvironmentSandbox
+        }).then(function () {
+            _this.payPal.prepareToRender(_this.payPalEnvironment, new __WEBPACK_IMPORTED_MODULE_1__ionic_native_paypal__["b" /* PayPalConfiguration */]({})).then(function () {
+                _this.payPal.renderSinglePaymentUI(_this.payment).then(function (response) {
+                    alert("Successfully paid. Status = " + response.response.state);
+                    console.log(response);
+                }, function () {
+                    console.error('Error or render dialog closed without being successful');
+                });
+            }, function () {
+                console.error('Error in configuration');
+            });
+        }, function () {
+            console.error('Error in initialization, maybe PayPal isn\'t supported or something else');
+        });
+    };
+    return PayPalPage;
+}());
+PayPalPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-paypal',template:/*ion-inline-start:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/paypal/paypal.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>PayPal</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <form name="paymentForm">\n      <ion-item>\n        <ion-label floating>Amount</ion-label>\n        <ion-input type="text" name="amount" [(ngModel)]="payment.amount"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Currency</ion-label>\n        <ion-select [(ngModel)]="payment.currency" name="currency">\n          <ion-option value="{{currency}}" *ngFor="let currency of currencies">{{currency}}</ion-option>\n        </ion-select>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Description</ion-label>\n        <ion-input type="text" name="description" [(ngModel)]="payment.shortDescription"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Intent</ion-label>\n        <ion-input type="text" name="intent" [(ngModel)]="payment.intent"></ion-input>\n      </ion-item>\n      <p>\n        <button ion-button block color="secondary" (click)="makePayment()">MAKE PAYMENT</button>\n      </p>\n  </form>\n</ion-content>'/*ion-inline-end:"/Users/eduardocastro/Library/Mobile Documents/com~apple~CloudDocs/Documents/programming/ionic/drink_app_stripe/src/pages/paypal/paypal.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_paypal__["a" /* PayPal */]])
+], PayPalPage);
+
+//# sourceMappingURL=paypal.js.map
+
+/***/ }),
+
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1077,13 +976,13 @@ AdminPage = __decorate([
 
 /***/ }),
 
-/***/ 213:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1091,39 +990,41 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_drink_detail_drink_detail__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_menu_menu__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_cardapio_cardapio__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__domain_user_user_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__domain_bebida_bebida_service__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__domain_user_user_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__domain_bebida_bebida_service__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__domain_cardapio_cardapio__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_querycode_querycode__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_admin_admin__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_admin_admin__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_home_home__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_creditos_creditos__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_historico_historico__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_stripe__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_pay_pay__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_stripe__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_paypal_paypal__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_paypal__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1165,7 +1066,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_17__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_18__pages_creditos_creditos__["a" /* CreditosPage */],
             __WEBPACK_IMPORTED_MODULE_19__pages_historico_historico__["a" /* HistoricoPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_pay_pay__["a" /* PayPage */]
+            __WEBPACK_IMPORTED_MODULE_21__pages_paypal_paypal__["a" /* PayPalPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -1179,7 +1080,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/menu-admin/menu-admin.module#MenuAdminPageModule', name: 'MenuAdminPage', segment: 'menu-admin', priority: 'low', defaultHistory: [] }
                 ]
             }),
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */]
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */],
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
@@ -1194,7 +1095,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_17__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_18__pages_creditos_creditos__["a" /* CreditosPage */],
             __WEBPACK_IMPORTED_MODULE_19__pages_historico_historico__["a" /* HistoricoPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_pay_pay__["a" /* PayPage */]
+            __WEBPACK_IMPORTED_MODULE_21__pages_paypal_paypal__["a" /* PayPalPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -1203,6 +1104,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__domain_cardapio_cardapio__["a" /* Cardapio */],
             __WEBPACK_IMPORTED_MODULE_13__domain_bebida_bebida_service__["a" /* BebidaService */],
             __WEBPACK_IMPORTED_MODULE_20__ionic_native_stripe__["a" /* Stripe */],
+            __WEBPACK_IMPORTED_MODULE_22__ionic_native_paypal__["a" /* PayPal */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
         ]
     })
@@ -1212,122 +1114,15 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 259:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NoodlioPay; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-
-
-
-var NoodlioPay = (function () {
-    function NoodlioPay(http) {
-        this.http = http;
-        /**
-        * Noodlio Pay Settings
-        *
-        *   Obtain your 'stripe_account' id by visting (both links):
-        *   - https://www.noodl.io/pay/connect
-        *   - https://www.noodl.io/pay/connect/test
-        *
-        *   Obtain your 'mashape_key' by visiting:
-        *   - https://noodlio-pay.p.mashape.com (press on get 'Get your API keys and start hacking')
-        */
-        this.stripe_account = "acct_16bvtBHW84OuTX9V";
-        this.mashape_key = "3fEagjJCGAmshMqVnwTR70bVqG3yp1lerJNjsnTzx5ODeOa99V";
-        this.test = 'true';
-        this.URL = 'https://noodlio-pay.p.mashape.com';
-        //URL = 'https://m-s-api-sibizavic.c9users.io';
-        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({
-            'X-Mashape-Key': this.mashape_key,
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Accept': 'application/json'
-        });
-    }
-    Object.defineProperty(NoodlioPay, "parameters", {
-        /**
-        * Init other (do not change)
-        */
-        get: function () { return [[__WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]]]; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-    * Main wrapper for charging the client
-    * Validates the credit card first (A), and then charges the client using the obtained 'source' (B)
-    */
-    NoodlioPay.prototype.charge = function (data) {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
-            // A. Validate Card
-            _this.validateCard(data).subscribe(function (resA) {
-                if (resA.hasOwnProperty('id')) {
-                    // B. Charge Card
-                    var source = resA.id;
-                    _this.chargeCard(source, data).subscribe(function (resB) {
-                        observer.next(resB);
-                    });
-                }
-                else {
-                    // error
-                    observer.next(resA);
-                }
-            });
-        });
-    };
-    /**
-    * POST /tokens/create
-    */
-    NoodlioPay.prototype.validateCard = function (data) {
-        var valUrl = this.URL + '/tokens/create';
-        var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
-        var params = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["e" /* URLSearchParams */]();
-        params.append('number', data.number);
-        params.append('exp_month', data.exp_month);
-        params.append('exp_year', data.exp_year);
-        params.append('cvc', data.cvc);
-        params.append('test', this.test);
-        return this.http.post(valUrl, params, options)
-            .map(function (res) { return res.json(); });
-    };
-    /**
-    * POST /charge/token
-    */
-    NoodlioPay.prototype.chargeCard = function (source, data) {
-        var valUrl = this.URL + '/charge/token';
-        var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
-        var params = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["e" /* URLSearchParams */]();
-        params.append('amount', data.amountCents); // In cents
-        params.append('currency', data.currency);
-        params.append('description', data.name); // or custom description
-        params.append('source', source);
-        params.append('stripe_account', this.stripe_account);
-        params.append('test', this.test);
-        return this.http
-            .post(valUrl, params, options)
-            .map(function (res) { return res.json(); });
-    };
-    return NoodlioPay;
-}());
-
-//# sourceMappingURL=noodliopay.js.map
-
-/***/ }),
-
 /***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_cardapio_cardapio__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1353,6 +1148,7 @@ var MyApp = (function () {
             { titulo: "Comprar Créditos", componente: __WEBPACK_IMPORTED_MODULE_5__pages_cardapio_cardapio__["a" /* CardapioPage */] },
             { titulo: "Histórico", componente: __WEBPACK_IMPORTED_MODULE_5__pages_cardapio_cardapio__["a" /* CardapioPage */] },
             { titulo: "Sair", componente: __WEBPACK_IMPORTED_MODULE_5__pages_cardapio_cardapio__["a" /* CardapioPage */] },
+            { titulo: "PayPal", componente: __WEBPACK_IMPORTED_MODULE_5__pages_cardapio_cardapio__["a" /* CardapioPage */] }
         ];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
@@ -1384,10 +1180,38 @@ MyApp = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Config; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var Config = (function () {
+    function Config() {
+    }
+    return Config;
+}());
+Config.payPalEnvironmentSandbox = 'AU8r9_cHKXSn5HJcbd-oLLlCiDoHuWO6aZY4GoE3EYX0qlBFecu7ynaK3HGBz9XEjL_v84Sx6KwPMTUo';
+Config.payPalEnvironmentProduction = 'ASFxnBeOTcTnutL14DyYF_3o-pTi-FAoArH6rN6fVW21HaiEAspnqRSZon6Thl_ddCFknqFPligCdOjP';
+Config = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+], Config);
+
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BebidaService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_user_service__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1436,7 +1260,7 @@ BebidaService = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuerycodePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1480,13 +1304,13 @@ QuerycodePage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardapioPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_cardapio_cardapio__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__domain_user_user_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_drink_detail_drink_detail__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_querycode_querycode__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1762,14 +1586,14 @@ CardapioPage = __decorate([
 
 /***/ }),
 
-/***/ 83:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__domain_user_user_service__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1808,5 +1632,5 @@ HomePage = __decorate([
 
 /***/ })
 
-},[213]);
+},[214]);
 //# sourceMappingURL=main.js.map

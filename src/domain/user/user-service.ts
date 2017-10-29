@@ -104,38 +104,4 @@ export class UserService {
       
     }
   }
-
-  updateCreditosCartao(creditos, plus){
-    console.log('novo: ', Number(creditos), 'antigo: ', typeof(this._userLogado.creditos));
-    let url = `http://dev-pi2-api.herokuapp.com/users/${this._userLogado.id}/`
-    if(plus == true){
-      this.loader = this._loadingCtrl.create({
-        content: 'Processando...'
-      })
-      let newCredits = this._userLogado.creditos + Number(creditos)
-      console.log('newCredits: ',newCredits)
-      const cred = {
-        creditos: newCredits
-      }
-      console.log('OIE', JSON.stringify(cred));
-      console.log('A URL É: ', url)
-      this._http.patch(url, cred, this.options).subscribe(data => {
-        console.log(data);
-
-        this._userLogado.creditos = cred.creditos;
-      });
-    }else{
-      const cred = {
-        creditos: this._userLogado.creditos - creditos
-      }
-      console.log(JSON.stringify(cred));
-      console.log('A URL É: ', url)
-      this._http.patch(url, cred, this.options).subscribe(data => {
-        console.log(data);
-        this._userLogado.creditos = cred.creditos;
-      });
-
-      
-    }
-  }  
 }
